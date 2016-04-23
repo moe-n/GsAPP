@@ -33,17 +33,25 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
         }
 
         //レイアウトにある画像と文字のViewを所得します。
+        TextView textView2 = (TextView) convertView.findViewById(R.id.text2);
         NetworkImageView imageView = (NetworkImageView) convertView.findViewById(R.id.image1);
-        TextView textView = (TextView) convertView.findViewById(R.id.text1);
+        TextView textView1 = (TextView) convertView.findViewById(R.id.text1);
+        TextView textView3 = (TextView) convertView.findViewById(R.id.text3);
+
+        //追加が必要
 
         //表示するセルの位置からデータをMessageRecordのデータを取得します。
         MessageRecord imageRecord = getItem(position);
 
         //mImageLoaderを使って画像をダウンロードし、Viewにセットします。
+        textView2.setText(imageRecord.getPeople());
+
         imageView.setImageUrl(imageRecord.getImageUrl(), mImageLoader);
         //Viewに文字をセットします。
-        textView.setText(imageRecord.getComment());
+        textView1.setText(imageRecord.getComment());
         //1つのセルのViewを返します。
+        textView3.setText(imageRecord.getAction());
+        //追加が必要
         return convertView;
     }
     //データをセットしなおす関数

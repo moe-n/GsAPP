@@ -4,7 +4,18 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:background="#4169e1"
+    android:id="@+id/mylist"/>
+
+    <TextView
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="people"
+        android:textSize="14sp"
+        android:text="people"
+        android:id="@+id/text2"/>
 
     <com.android.volley.toolbox.NetworkImageView
         android:layout_width="100dp"
@@ -20,19 +31,12 @@
         tools:text="comment"
         android:id="@+id/text1"/>
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textAppearance="?android:textAppearanceLarge"
-        tools:text="people"
-        android:id="@+id/text1"/>
-
     <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/dammy_button_label"
-        android:textColor="#666666"
-        android:layout_gravity="right"
-        />
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:text="action"
+        android:id="@+id/text3" />
+
 </LinearLayout>
