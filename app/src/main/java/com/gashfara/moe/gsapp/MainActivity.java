@@ -47,8 +47,9 @@ public class MainActivity extends ActionBarActivity {
     //自分で作った関数です。一覧のデータを作成して表示します。
     private void fetch() {
         //jsonデータをサーバーから取得する通信機能です。Volleyの機能です。通信クラスのインスタンスを作成しているだけです。通信はまだしていません。
-        JsonObjectRequest request = new JsonObjectRequest(
-                "https://db.tt/sTytAUbu" ,//jsonデータが有るサーバーのURLを指定します。
+        JsonObjectRequest request;
+        request = new JsonObjectRequest(
+                "https://dl.dropboxusercontent.com/u/18576208/json.txt",//jsonデータが有るサーバーのURLを指定します。
                 null,
                 //サーバー通信した結果、成功した時の処理をするクラスを作成しています。
                 new Response.Listener<JSONObject>() {
@@ -90,12 +91,10 @@ public class MainActivity extends ActionBarActivity {
             //１つだけ取り出します。
             JSONObject jsonMessage = jsonMessages.getJSONObject(i);
             //jsonの値を取得します。
-            String user = jsonMessage.getString("people");
             String title = jsonMessage.getString("comment");
             String url = jsonMessage.getString("imageUrl");
-            String button = jsonMessage.getString("action");
             //jsonMessageを新しく作ります。
-            MessageRecord record = new MessageRecord(user,url,title,button);
+            MessageRecord record = new MessageRecord(url,title);
             //MessageRecordの配列に追加します。
             records.add(record);
         }
