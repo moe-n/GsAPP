@@ -49,7 +49,7 @@ public class MainActivity extends ActionBarActivity {
         //jsonデータをサーバーから取得する通信機能です。Volleyの機能です。通信クラスのインスタンスを作成しているだけです。通信はまだしていません。
         JsonObjectRequest request;
         request = new JsonObjectRequest(
-                "https://dl.dropboxusercontent.com/u/18576208/json.txt",//jsonデータが有るサーバーのURLを指定します。
+                "http://moeapp.sakura.ne.jp/gsapp/json.txt",//jsonデータが有るサーバーのURLを指定します。
                 null,
                 //サーバー通信した結果、成功した時の処理をするクラスを作成しています。
                 new Response.Listener<JSONObject>() {
@@ -91,10 +91,12 @@ public class MainActivity extends ActionBarActivity {
             //１つだけ取り出します。
             JSONObject jsonMessage = jsonMessages.getJSONObject(i);
             //jsonの値を取得します。
-            String title = jsonMessage.getString("comment");
             String url = jsonMessage.getString("imageUrl");
+            String title = jsonMessage.getString("title");
+            String store = jsonMessage.getString("store");
+            String comment = jsonMessage.getString("comment");
             //jsonMessageを新しく作ります。
-            MessageRecord record = new MessageRecord(url,title);
+            MessageRecord record = new MessageRecord(url,title,store,comment);
             //MessageRecordの配列に追加します。
             records.add(record);
         }

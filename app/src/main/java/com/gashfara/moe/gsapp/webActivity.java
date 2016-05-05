@@ -19,17 +19,23 @@ public class WebActivity extends ActionBarActivity {
         //レイアウトをセットします
         setContentView(R.layout.activity_web);
 
-        // Intent を取得。
-        //Intentでアクティビティー間のデータを受け渡しします。Intentの値を受け取るために作成。
+        // Intent というクラスを取得。
+        // getintenは頭にクラス名がついていない。もともとついている関数。
+        // actionveractivitにintenという関数がありそれを使っている。
+        // を継承Intentでアクティビティー間のデータを受け渡しします。
+        // intenとはユニークな情報を管理する(値を渡す、画面を開く、など）のためのクラス。
+        // 自分自身のIntentの値を受け取るためにインスタンスに代入。
         Intent intent = getIntent();
-        // キーを元にインテントデータを取得する
+        // キーを元に自分自身のインテントデータを取得する
+        // 複数の値を受け取れるため、今回はurlという値に指定する
         String url  = intent.getStringExtra("url");
 
-        //WebViewを探す
+        //WebViewというidをキーにして探す
         WebView webView = (WebView) findViewById(R.id.webView1);
-        //デバッグログ
+        //log.dという関数を使ってデバッグログを実装。
         Log.d("get myurl", url);
-        //ブラウザの機能をセットします。お約束。
+        //webviewclientといクラスをnewする。
+        // ブラウザの機能をセットします。javaのお約束。
         webView.setWebViewClient(new WebViewClient());
         //URLを表示します。
         webView.loadUrl(url);
