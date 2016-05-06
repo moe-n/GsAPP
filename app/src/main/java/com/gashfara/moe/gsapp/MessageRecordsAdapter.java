@@ -39,9 +39,9 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
 
         //レイアウトにある画像と文字のViewを所得します。
         NetworkImageView imageView = (NetworkImageView) convertView.findViewById(R.id.image1);
-        TextView textView2 = (TextView) convertView.findViewById(R.id.text2);
-        TextView textView3 = (TextView) convertView.findViewById(R.id.text3);
-        TextView textView1 = (TextView) convertView.findViewById(R.id.text1);
+        TextView textViewtitle = (TextView) convertView.findViewById(R.id.title1);
+        TextView textViewstore= (TextView) convertView.findViewById(R.id.store1);
+        TextView textViewcomment = (TextView) convertView.findViewById(R.id.comment1);
 
 
         //webリンクを制御するプログラムはここから
@@ -49,12 +49,12 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
         //TextViewをタップした時のイベントリスナー（タップの状況を監視するクラス）を登録します。
         // onTouchにタップした時の処理を記述します(スワイプなど他の動作に対するリスナーもある）。buttonやほかのViewも同じように記述できる。
         // onToucのクラスを上書きする部分が中かっこ以下の部分。
-        textView3.setOnTouchListener(new ViewGroup.OnTouchListener() {
+        textViewstore.setOnTouchListener(new ViewGroup.OnTouchListener() {
             //タップした時の処理
             @Override
             public boolean onTouch(final View view, MotionEvent event) {
                 //タップしたのはTextViewなのでキャスト（型の変換）する。汎用的なviewとい型をtextviewに変換
-                TextView textView3 = (TextView) view;
+                TextView textViewstore = (TextView) view;
                 //リンクをタップした時に処理するクラスを作成。AndroidSDKにあるLinkMovementMethodを拡張しています。
                 //リンクではないところをタップする場合、下のクラスは使わない
                 MutableLinkMovementMethod m = new MutableLinkMovementMethod();
@@ -77,12 +77,12 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
                 });
                 //ここからはMutableLinkMovementMethodを使うための処理なので毎回同じ感じ。
                 //リンクのチェックを行うため一時的にsetする
-                textView3.setMovementMethod(m);
-                boolean mt = m.onTouchEvent(textView3, (Spannable) textView3.getText(), event);
+                textViewstore.setMovementMethod(m);
+                boolean mt = m.onTouchEvent(textViewstore, (Spannable) textViewstore.getText(), event);
                 //チェックが終わったので解除する しないと親view(listview)に行けない
-                textView3.setMovementMethod(null);
+                textViewstore.setMovementMethod(null);
                 //setMovementMethodを呼ぶとフォーカスがtrueになるのでfalseにする
-                textView3.setFocusable(false);
+                textViewstore.setFocusable(false);
                 //戻り値がtrueの場合は今のviewで処理、falseの場合は親view(ListView)で処理
                 return mt;
             }
@@ -98,9 +98,9 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
         //mImageLoaderを使って画像をダウンロードし、Viewにセットします。
         imageView.setImageUrl(imageRecord.getImageUrl(), mImageLoader);
         //Viewに文字をセットします。
-        textView2.setText(imageRecord.getTitle());
-        textView3.setText(imageRecord.getStore());
-        textView1.setText(imageRecord.getComment());
+        textViewtitle.setText(imageRecord.getTitle());
+        textViewstore.setText(imageRecord.getStore());
+        textViewcomment.setText(imageRecord.getComment());
         //1つのセルのViewを返します
         return convertView;
     }

@@ -13,29 +13,34 @@
         android:scaleType="centerCrop"
         android:id="@+id/image1"/>
 
-    <TextView
-        android:layout_width="60dp"
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceLarge"
         tools:text="title"
-        android:id="@+id/text2"/>
+        android:id="@+id/title1"
+        android:textColor="#990000"/>
 
-    <TextView
-        android:layout_width="0dp"
+       <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textAppearance="?android:textAppearanceLarge"
+        android:textAppearance="?android:textAppearanceMedium"
         tools:text="store"
         android:autoLink="web"
-        android:id="@+id/text3"/>
+        android:id="@+id/store1" />
 
-    <TextView
-        android:layout_width="0dp"
+       <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textAppearance="?android:textAppearanceLarge"
+        android:textAppearance="?android:textAppearanceSmall"
         tools:text="comment"
-        android:id="@+id/text1"/>
-
+        android:id="@+id/comment1" />
+  </LinearLayout>
 
 </LinearLayout>
