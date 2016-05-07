@@ -10,6 +10,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
 import android.view.MotionEvent;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -85,7 +86,6 @@ public class MutableLinkMovementMethod extends LinkMovementMethod {
                 Selection.removeSelection(buffer);
             }
         }
-
         return false;//super.onTouchEvent(widget, buffer, event);
     }
 }

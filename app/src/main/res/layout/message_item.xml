@@ -11,36 +11,46 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
-        android:id="@+id/image1"/>
+        android:id="@+id/image1" />
 
-    <LinearLayout
+
+       <LinearLayout
         android:layout_weight="1"
         android:orientation="vertical"
         android:layout_width="0dp"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
 
         <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceLarge"
         tools:text="title"
         android:id="@+id/title1"
-        android:textColor="#990000"/>
+        android:textColor="#990000"
+        android:background="#ffffec95"
+        android:textSize="30sp" />
 
        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
         tools:text="store"
         android:autoLink="web"
-        android:id="@+id/store1" />
+        android:duplicateParentState="true"
+        android:id="@+id/store1"
+        android:background="#ffffd38a"
+        android:textSize="18sp" />
 
        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceSmall"
         tools:text="comment"
-        android:id="@+id/comment1" />
-  </LinearLayout>
+        android:id="@+id/comment1"
+        android:textSize="20sp"
+        android:background="#ffffba2d" />
+
+    </LinearLayout>
 
 </LinearLayout>
