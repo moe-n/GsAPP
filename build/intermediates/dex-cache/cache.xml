@@ -2,11 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/classes.jar"
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="ed88e1f0c8fbf66e1da918545f0a6790f893bceb">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-326c2aecd9a2a01cb99cd24e9858ecb1897ecc5a.jar" />
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-26dcbe28fe245d0c2f119fece2f8335b4e04ef42.jar" />
+    </item>
+    <item
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.example.library/android-cloud-sdk-v2.4.6/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="545df7884cac0cd4d3b7448c9ce6a5919f410f84">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-6d8065b92961cb713dd28b56a27f2e72a2d03564.jar" />
+    </item>
+    <item
+        jar="/Users/vv000915/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.7.2/20f6463eb19ac61960c5d91a094c2f4f0727dc2e/okhttp-2.7.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="20f6463eb19ac61960c5d91a094c2f4f0727dc2e">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/okhttp-2.7.2-fb2d3b8717be96c5f13d7d57a498bf9bc18ae56d.jar" />
     </item>
     <item
         jar="/Users/vv000915/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/24.0.0-alpha1/support-annotations-24.0.0-alpha1.jar"
@@ -16,39 +30,53 @@
         <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha1-4beb438b3d08f70eba75f4d0d396a4ba200fa736.jar" />
     </item>
     <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/classes.jar"
+        jar="/Users/vv000915/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-apache/2.7.2/c2c4715f9b10eec73cb17d0348c6d18a83a7f283/okhttp-apache-2.7.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c4715f9b10eec73cb17d0348c6d18a83a7f283">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/okhttp-apache-2.7.2-aa07edbe5f6a527ef214999cb9d89efc88d0d9f0.jar" />
+    </item>
+    <item
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="9684c95278dc45a142d7de3db9e7e39aa520e1e0">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-19ef30d011d5186e4d1c0646a9bdd8bd0e5877f0.jar" />
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-9213c1ef8bff5aee5210ecffbf1f1d3f26ac5b08.jar" />
     </item>
     <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/libs/internal_impl-24.0.0-alpha1.jar"
+        jar="/Users/vv000915/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="e57fba0a2d57d3501d8f4ff44c23092978804845">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha1-55142590e907c355f0270135c227d9e873f79e04.jar" />
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/okio-1.6.0-8a518c429db3c853d58216b9af9ada2b969b7a24.jar" />
     </item>
     <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.volley/volley/unspecified/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="5114a4a2699de6fd2990abfc9e1b2aee91951d6f">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-f98ba210bad50bdbcd1e1b006cab597a055c0126.jar" />
-    </item>
-    <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/classes.jar"
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="9aaaea3a89040f8176f810c85e288fc74d5d1f12">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-93c90657087ea36820477626643426a6eab6ad3d.jar" />
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-60e43ef1c337aa633920327075b7e3fa4eca8ec3.jar" />
     </item>
     <item
-        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/classes.jar"
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.volley/volley/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5114a4a2699de6fd2990abfc9e1b2aee91951d6f">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-40d963a23617bd001a1aceadaaec71316d448f50.jar" />
+    </item>
+    <item
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/jars/libs/internal_impl-24.0.0-alpha1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e57fba0a2d57d3501d8f4ff44c23092978804845">
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha1-188487f83c5b17e1c0a414e916c7056031e122d1.jar" />
+    </item>
+    <item
+        jar="/Users/vv000915/GsAPP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="a6af5beedc2e8c946abc3771525e2fed77439309">
-        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-ed2d80ae081717fbf24e463895e79efbd88805fb.jar" />
+        <dex dex="/Users/vv000915/GsAPP/app/build/intermediates/pre-dexed/debug/classes-9b5b2fd2c612c36f63cacd74f5d0353f6fce27cd.jar" />
     </item>
 
 </items>

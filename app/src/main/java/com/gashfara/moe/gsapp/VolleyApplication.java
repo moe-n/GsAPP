@@ -4,8 +4,10 @@ package com.gashfara.moe.gsapp;
 //importはすでに用意されているAndroidSDKのクラスなどを取り込んで使用するための宣言です。
 //プログラムでpackage以外のクラスを使用するとエラーになるのでそのクラスごとに必要に応じて追加すればOKです。
 import android.app.Application;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.kii.cloud.storage.Kii;
 
 //Applicationクラスを継承extend（コピーみたいなもの）しています。Applicationの機能がそのまま使えます。{}までがクラスです。
 //これはクラスの定義です。このクラスを使うにはnewなどをしてインスタンス化（実態を作る）してから使います。
@@ -27,6 +29,10 @@ public class VolleyApplication extends Application {
         mRequestQueue = Volley.newRequestQueue(this);
         //自分自身のインスタンス（newなどでクラスを実体化したもの）を代入しています。
         sInstance = this;
+        //Userで追加ここから
+        //KiiCloudの初期化。Applicationクラスで実行してください。キーは自分の値にかえる。
+        Kii.initialize(getApplicationContext(), "7cd105cf", "72c00dfd51bf84785ff382362ab63853", Kii.Site.JP);
+        //Userで追加ここまで
     }
     //インスタンスを返す関数（メソッドです）。クラスの中にある変数はこのように関数を通じて返すようにするのが一般的です。
     //synchronizedは同時に動作すると不具合が起きるときに宣言します。Volleyの仕様です。

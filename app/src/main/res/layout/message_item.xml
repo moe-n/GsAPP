@@ -31,7 +31,7 @@
         android:id="@+id/title1"
         android:textColor="#990000"
         android:background="#ffffec95"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
        <TextView
         android:layout_width="match_parent"

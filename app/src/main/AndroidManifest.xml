@@ -23,6 +23,14 @@
             android:name=".webActivity"
             android:label="@string/title_activity_web" >
         </activity>
+        <activity
+            android:name=".UserActivity"
+            android:label="@string/title_activity_user" >
+        </activity>
+        <activity
+            android:name=".CustomDialogFragment"
+            android:label="@string/title_activity_custom_dialog_fragment" >
+        </activity>
     </application>
 
 </manifest>
