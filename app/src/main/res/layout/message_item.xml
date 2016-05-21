@@ -5,13 +5,15 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-    android:id="@+id/mylist" >
+    android:id="@+id/mylist"
+    android:background="#ffffeedf">
 
     <com.android.volley.toolbox.NetworkImageView
-        android:layout_width="100dp"
+        android:layout_width="72dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
-        android:id="@+id/image1" />
+        android:id="@+id/image1"
+        android:layout_weight="0.16" />
 
 
        <LinearLayout
@@ -26,31 +28,30 @@
 
         <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30sp"
         tools:text="title"
         android:id="@+id/title1"
-        android:textColor="#990000"
-        android:background="#ffffec95"
+            android:background="#ffffc75b"
         android:textSize="24sp" />
 
-       <TextView
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="comment"
+            android:id="@+id/comment1"
+            android:textSize="20sp"
+            android:background="#ffffde54" />
+
+           <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40sp"
         tools:text="store"
         android:autoLink="web"
         android:duplicateParentState="true"
         android:id="@+id/store1"
-        android:background="#ffffd38a"
-        android:textSize="18sp" />
+        android:background="#ffffeedf"
+        android:textSize="12sp" />
 
-       <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="comment"
-        android:id="@+id/comment1"
-        android:textSize="20sp"
-        android:background="#ffffba2d" />
-
-    </LinearLayout>
+       </LinearLayout>
 
 </LinearLayout>
