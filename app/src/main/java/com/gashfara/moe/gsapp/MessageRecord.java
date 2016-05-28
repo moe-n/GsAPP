@@ -8,15 +8,17 @@ public class MessageRecord {
     private String title;
     private String comment;
     private String store;
+    private int goodCount;
 
 
     //データを１つ作成する関数(コンストラクター)です。項目が増えたら増やしましょう。
-    public MessageRecord(String id, String imageUrl, String title, String store, String comment) {
+    public MessageRecord(String id, String imageUrl, String title, String store, String comment, int goodCount) {
         this.id = id;
         this.imageUrl = imageUrl;
         this.title = title;
         this.comment = comment;
         this.store = store;
+        this.goodCount = this.goodCount;
 
     }
     //それぞれの項目を返す関数です。項目が増えたら増やしましょう。
@@ -34,5 +36,8 @@ public class MessageRecord {
     public String getStore() {
         return store;
     }
-
+    public int getGoodCount() {
+        return goodCount;
+    }
+    public void setGoodCount(int goodCount){this.goodCount = goodCount;}
 }

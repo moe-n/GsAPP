@@ -107,8 +107,9 @@ public class MainActivity extends ActionBarActivity {
                             String title = obj.getString("title", "");
                             String comment = obj.getString("comment", "");
                             String store = obj.getString("store", "");
+                            int goodCount = obj.getInt("goodCount", 0);//Goodで修正
                             //MessageRecordを新しく作ります。
-                            MessageRecord record = new MessageRecord(id, comment, title, store, imageUrl);
+                            MessageRecord record = new MessageRecord(id,comment,title,store,imageUrl,goodCount);
                             //MessageRecordの配列に追加します。
                             records.add(record);
                         }
