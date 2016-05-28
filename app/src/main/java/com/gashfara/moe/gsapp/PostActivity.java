@@ -214,6 +214,15 @@ public class PostActivity extends ActionBarActivity {
     //投稿ボタンを御した時の処理
     public void onPostButtonClicked(View v) {
         //入力文字を得る
+        EditText mtitleField = (EditText) (findViewById(R.id.title_field));
+        title = mtitleField.getText().toString();
+        //未入力の時はエラー.""は文字が空
+        if (title.equals("")) {
+            //ダイアログを表示
+            showAlert(getString(R.string.no_data_message));
+            return;
+        }
+
         EditText mCommentField = (EditText) (findViewById(R.id.comment_field));
         comment = mCommentField.getText().toString();
         //Log.d("mogi comment", ":" + comment + ":");
@@ -223,14 +232,7 @@ public class PostActivity extends ActionBarActivity {
             showAlert(getString(R.string.no_data_message));
             return;
         }
-        EditText mtitleField = (EditText) (findViewById(R.id.title_field));
-        title = mtitleField.getText().toString();
-        //未入力の時はエラー.""は文字が空
-        if (title.equals("")) {
-            //ダイアログを表示
-            showAlert(getString(R.string.no_data_message));
-            return;
-        }
+
         EditText mstoreField = (EditText) (findViewById(R.id.store_field));
         store = mstoreField.getText().toString();
         //未入力の時はエラー.""は文字が空
@@ -239,6 +241,7 @@ public class PostActivity extends ActionBarActivity {
             showAlert(getString(R.string.no_data_message));
             return;
         }
+
         //画像をUPしてからmessagesに投稿。
         if (mImagePath != null) {
             //ファイルをUP、完了した時にpostMessagesを実行している。
@@ -254,8 +257,8 @@ public class PostActivity extends ActionBarActivity {
         KiiBucket bucket = Kii.bucket("messages");
         KiiObject object = bucket.object();
         //Json形式でKeyのcommentをセット.{"comment":"こめんとです","imageUrl":"http://xxx.com/xxxx"}
-        object.set("comment", comment);
         object.set("title", title);
+        object.set("comment", comment);
         object.set("store", store);
 
         //画像があるときだけセット
@@ -311,7 +314,7 @@ public class PostActivity extends ActionBarActivity {
                                 object.publishBody(new KiiObjectPublishCallback() {
                                     @Override
                                     public void onPublishCompleted(String url, KiiObject kiiObject, Exception e) {
-                                        Log.d("mogiurl", url);
+                                        Log.d("moeurl", url);
                                         //画像のURL付きでmessagesに投稿する。
                                         postMessages(url);
                                     }

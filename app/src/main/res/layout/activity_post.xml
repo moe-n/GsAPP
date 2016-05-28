@@ -10,19 +10,22 @@
         android:orientation="vertical" >
 
         <EditText
-            android:id="@+id/comment_field"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="コメント"
-             >
-        </EditText>
-        <EditText
             android:id="@+id/title_field"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="寿司ネタの名前"
             >
         </EditText>
+
+        <EditText
+            android:id="@+id/comment_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="コメント"
+            >
+        </EditText>
+
+
         <EditText
             android:id="@+id/store_field"
             android:layout_width="fill_parent"
