@@ -85,8 +85,9 @@ public class MainActivity extends ActionBarActivity {
         KiiQuery query = new KiiQuery();
         //ソート条件を設定。日付の降順
         query.sortByDesc("_created");
-        //バケットmessagesを検索する。最大200件
-        Kii.bucket("messages")
+        //バケットmessagesを検索する。最大10件
+        query.setLimit(10);
+        final int query1 = Kii.bucket("messages")
                 .query(new KiiQueryCallBack<KiiObject>() {
                     //検索が完了した時
                     @Override
@@ -109,12 +110,32 @@ public class MainActivity extends ActionBarActivity {
                             String store = obj.getString("store", "");
                             int goodCount = obj.getInt("goodCount", 0);//Goodで修正
                             //MessageRecordを新しく作ります。
-                            MessageRecord record = new MessageRecord(id,comment,title,store,imageUrl,goodCount);
+                            MessageRecord record = new MessageRecord(id, comment, title, store, imageUrl, goodCount);
                             //MessageRecordの配列に追加します。
                             records.add(record);
                         }
                         //データをアダプターにセットしています。これで表示されます。
                         mAdapter.setMessageRecords(records);
+
+
+                    while(result.hasNext()) {
+                        KiiQueryResult result = result.getNextQueryResult();
+                        List objLists = result.getResult();
+                        for (KiiObject obj : objLists) {
+                            String id = obj.getString("_id", "");
+                            String imageUrl = obj.getString("imageUrl", "");
+                            String title = obj.getString("title", "");
+                            String comment = obj.getString("comment", "");
+                            String store = obj.getString("store", "");
+                            int goodCount = obj.getInt("goodCount", 0);//Goodで修正
+                            //MessageRecordを新しく作ります。
+                            MessageRecord record = new MessageRecord(id, comment, title, store, imageUrl, goodCount);
+                            //MessageRecordの配列に追加します。
+                            records.add(record);
+                        }
+                        //データをアダプターにセットしています。これで表示されます。
+                        mAdapter.setMessageRecords(records);
+
                     }
                 }, query);
 
