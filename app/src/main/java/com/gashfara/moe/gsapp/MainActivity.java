@@ -146,6 +146,13 @@ public class MainActivity extends ActionBarActivity {
         super.onStart();
         //一覧のデータを作成して表示します。
         fetch();
+          //GrowthHackで追加ここから
+          //GAのスクリーン名はアクティビティーの名前を送信します。
+            Tracker t = ((VolleyApplication)getApplication()).getTracker(VolleyApplication.TrackerName.APP_TRACKER);
+            t.setScreenName(this.getClass().getSimpleName());
+            t.send(new HitBuilders.AppViewBuilder().build());
+            //GrowthHackで追加ここまで
+
     }
     //ListView2で追加ここまで
 

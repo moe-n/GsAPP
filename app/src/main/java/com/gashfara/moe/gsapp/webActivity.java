@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.vision.Tracker;
+
 
 class WebActivity extends ActionBarActivity {
 
@@ -40,6 +43,23 @@ class WebActivity extends ActionBarActivity {
         //URLを表示します。
         webView.loadUrl(url);
     }
+
+    //GrowthHackで追加ここから
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Tracker t = ((VolleyApplication)getApplication()).getTracker(VolleyApplication.TrackerName.APP_TRACKER);
+        t.setScreenName(this.getClass().getSimpleName());
+        t.send(new HitBuilders.AppViewBuilder().build());
+    }
+    //GrowthHackで追加ここまで
+
+
+
+
+
+
+
     //デフォルトで作成されたメニューの関数です。未使用。
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
